@@ -68,12 +68,13 @@ public class ApiUtil {
     public static ArrayList<Book> getBookFromJson(String json){
         final String ID ="id";
         final String TITLE = "title";
-        final String SUBTITLE = "subTitle";
+        final String SUBTITLE = "subtitle";
         final String AUTHORS = "authors";
         final String PUBLISHER = "publisher";
         final String PUBLISHED_DATE = "publishedDate";
         final String ITEMS = "items";
         final String VOLUMEINFO = "volumeInfo";
+        final String DESCRIPTION = "description";
         ArrayList<Book> books = new ArrayList<Book>();
         try{
             JSONObject jsonBooks = new JSONObject(json);
@@ -91,7 +92,8 @@ public class ApiUtil {
                         ,volumeInfoJson.getString(TITLE)
                         ,(volumeInfoJson.isNull(SUBTITLE)?"":volumeInfoJson.getString(SUBTITLE))
                         ,authors,volumeInfoJson.getString(PUBLISHER)
-                        ,volumeInfoJson.getString(PUBLISHED_DATE));
+                        ,volumeInfoJson.getString(PUBLISHED_DATE)
+                        ,volumeInfoJson.getString(DESCRIPTION));
 
                 books.add(book);
             }

@@ -3,31 +3,31 @@
 3    package="tk.crucial.books.test" >
 4
 5    <uses-sdk
-5-->C:\Users\Nicholas\StudioProjects\importTests\Books\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger9092085539495416722.xml:5:5-74
+5-->/home/crucialjun/AndroidStudioProjects/Books/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3752967809169892525.xml:5:5-74
 6        android:minSdkVersion="16"
-6-->C:\Users\Nicholas\StudioProjects\importTests\Books\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger9092085539495416722.xml:5:15-41
+6-->/home/crucialjun/AndroidStudioProjects/Books/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3752967809169892525.xml:5:15-41
 7        android:targetSdkVersion="28" />
-7-->C:\Users\Nicholas\StudioProjects\importTests\Books\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger9092085539495416722.xml:5:42-71
+7-->/home/crucialjun/AndroidStudioProjects/Books/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3752967809169892525.xml:5:42-71
 8
 9    <instrumentation
-9-->C:\Users\Nicholas\StudioProjects\importTests\Books\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger9092085539495416722.xml:11:5-15:66
+9-->/home/crucialjun/AndroidStudioProjects/Books/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3752967809169892525.xml:11:5-15:66
 10        android:name="android.support.test.runner.AndroidJUnitRunner"
-10-->C:\Users\Nicholas\StudioProjects\importTests\Books\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger9092085539495416722.xml:11:22-83
+10-->/home/crucialjun/AndroidStudioProjects/Books/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3752967809169892525.xml:11:22-83
 11        android:functionalTest="false"
-11-->C:\Users\Nicholas\StudioProjects\importTests\Books\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger9092085539495416722.xml:14:22-52
+11-->/home/crucialjun/AndroidStudioProjects/Books/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3752967809169892525.xml:14:22-52
 12        android:handleProfiling="false"
-12-->C:\Users\Nicholas\StudioProjects\importTests\Books\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger9092085539495416722.xml:13:22-53
+12-->/home/crucialjun/AndroidStudioProjects/Books/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3752967809169892525.xml:13:22-53
 13        android:label="Tests for tk.crucial.books"
-13-->C:\Users\Nicholas\StudioProjects\importTests\Books\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger9092085539495416722.xml:15:22-64
+13-->/home/crucialjun/AndroidStudioProjects/Books/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3752967809169892525.xml:15:22-64
 14        android:targetPackage="tk.crucial.books" />
-14-->C:\Users\Nicholas\StudioProjects\importTests\Books\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger9092085539495416722.xml:12:22-62
+14-->/home/crucialjun/AndroidStudioProjects/Books/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3752967809169892525.xml:12:22-62
 15
 16    <application android:debuggable="true" >
-16-->C:\Users\Nicholas\StudioProjects\importTests\Books\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger9092085539495416722.xml:7:5-9:19
-16-->C:\Users\Nicholas\StudioProjects\importTests\Books\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger9092085539495416722.xml:7:18-43
+16-->/home/crucialjun/AndroidStudioProjects/Books/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3752967809169892525.xml:7:5-9:19
+16-->/home/crucialjun/AndroidStudioProjects/Books/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3752967809169892525.xml:7:18-43
 17        <uses-library android:name="android.test.runner" />
-17-->C:\Users\Nicholas\StudioProjects\importTests\Books\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger9092085539495416722.xml:8:9-60
-17-->C:\Users\Nicholas\StudioProjects\importTests\Books\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger9092085539495416722.xml:8:23-57
+17-->/home/crucialjun/AndroidStudioProjects/Books/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3752967809169892525.xml:8:9-60
+17-->/home/crucialjun/AndroidStudioProjects/Books/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger3752967809169892525.xml:8:23-57
 18    </application>
 19
 20</manifest>
