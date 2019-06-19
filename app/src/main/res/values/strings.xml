@@ -2,4 +2,9 @@
     <string name="app_name">Books</string>
     <string name="error_loading_data">Error Loading Data</string>
     <string name="search">search</string>
+
+    <string name="hint_title">Insert Title</string>
+    <string name="hint_author">Insert Authors</string>
+    <string name="hint_publisher">Insert Publisher</string>
+    <string name="hint_isbn">Insert Isbn</string>
 </resources>

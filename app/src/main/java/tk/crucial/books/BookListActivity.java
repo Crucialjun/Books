@@ -1,5 +1,6 @@
 package tk.crucial.books;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.support.v7.widget.SearchView;
 import android.app.SearchManager;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.SearchView.OnQueryTextListener;
 
@@ -33,8 +35,8 @@ public class BookListActivity extends AppCompatActivity implements SearchView.On
         mLoadingProgress = findViewById(R.id.pbLoading);
         rvBooks = findViewById(R.id.rv_books);
         LinearLayoutManager booksLayoutManager = new LinearLayoutManager(this
-                ,LinearLayoutManager.VERTICAL
-                ,false);
+                , LinearLayoutManager.VERTICAL
+                , false);
 
         rvBooks.setLayoutManager(booksLayoutManager);
 
@@ -46,12 +48,11 @@ public class BookListActivity extends AppCompatActivity implements SearchView.On
         }
 
 
-
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.book_list_menu,menu);
+        getMenuInflater().inflate(R.menu.book_list_menu, menu);
         final MenuItem searchItem = menu.findItem(R.id.action_search);
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         searchView.setOnQueryTextListener(this);
@@ -59,12 +60,26 @@ public class BookListActivity extends AppCompatActivity implements SearchView.On
     }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_advanced_search:
+                Intent intent = new Intent(this, SearchActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+
+        }
+    }
+
+    @Override
     public boolean onQueryTextSubmit(String query) {
         try {
             URL bookUrl = ApiUtil.buildUrl(query);
             new BooksQueryTask().execute(bookUrl);
-        }catch(Exception e){
-            Log.d("Error",e.getMessage());
+        } catch (Exception e) {
+            Log.d("Error", e.getMessage());
         }
         return false;
     }
@@ -74,16 +89,16 @@ public class BookListActivity extends AppCompatActivity implements SearchView.On
         return false;
     }
 
-    public class BooksQueryTask extends AsyncTask<URL,Void,String>{
+    public class BooksQueryTask extends AsyncTask<URL, Void, String> {
 
         @Override
         protected String doInBackground(URL... urls) {
             URL searchUrl = urls[0];
             String result = null;
-            try{
+            try {
                 result = ApiUtil.getJson(searchUrl);
-            }catch (IOException e){
-                Log.e("Error",e.getMessage());
+            } catch (IOException e) {
+                Log.e("Error", e.getMessage());
             }
             return result;
         }
@@ -92,16 +107,16 @@ public class BookListActivity extends AppCompatActivity implements SearchView.On
         protected void onPostExecute(String s) {
             TextView tvError = findViewById(R.id.tv_error);
             mLoadingProgress.setVisibility(View.INVISIBLE);
-            if(s == null){
+            if (s == null) {
                 rvBooks.setVisibility(View.INVISIBLE);
                 tvError.setVisibility(View.VISIBLE);
-            }else{
+            } else {
                 rvBooks.setVisibility(View.VISIBLE);
                 tvError.setVisibility(View.INVISIBLE);
             }
 
             ArrayList<Book> books = ApiUtil.getBookFromJson(s);
-            String resultString = "" ;
+            String resultString = "";
 
             BooksAdapter adapter = new BooksAdapter(books);
             rvBooks.setAdapter(adapter);
