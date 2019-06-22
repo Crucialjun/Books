@@ -73,6 +73,7 @@ public class BookListActivity extends AppCompatActivity implements SearchView.On
         for (int i = 0; i < itemNum; i++) {
             recentMenu = menu.add(Menu.NONE,i,Menu.NONE,recentList.get(i));
         }
+
         return true;
     }
 

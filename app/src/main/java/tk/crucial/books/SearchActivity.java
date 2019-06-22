@@ -41,13 +41,13 @@ public class SearchActivity extends AppCompatActivity {
                     if(position == 0 || position == 5){
                         position = 1;
                     }else{
-                        position++;
+                        position = position +1;
                     }
 
                     String key = SpUtils.QUERY + String.valueOf(position);
                     String value = title + "," + author + "," + publisher + "," + isbn;
                     SpUtils.setPreferenceString(context,key,value);
-                    SpUtils.setPreferenceInt(context,key,position);
+                    SpUtils.setPreferenceInt(context,SpUtils.POSITION,position);
 
                     Intent intent = new Intent(getApplicationContext(),BookListActivity.class);
                     intent.putExtra("Query",queryUrl.toString());
